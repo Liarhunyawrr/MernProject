@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo&display=swap");
+* {
+  --headingfont: "Kanit", sans-serif;
+  --subheading: "Mulish", sans-serif;
+  --parafont: "Exo", sans-serif;
+}
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #555;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background:  #888;
+}
+
+::-webkit-scrollbar-thumb:vertical:active {
+  background-color: #999;
+}
+
+::-webkit-scrollbar-track-piece:vertical:active {
+  background-color: #666;
+}
+
+
+body {
+  background-color: #262626;
+  color: white;
+}
+.navb {
+  background-color: #837070;
+  top: -93px;
+  cursor: pointer;
+  width: 100%;
+  transition: all 1s;
+}
+.navb.active {
+  top: -4%;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.navb .menu {
+  display: flex;
+  align-items: baseline;
+  position: relative;
+  justify-content: space-between;
+}
+.m-bt {
+  position: absolute;
+  left: 50%;
+  top: 174%;
+  font-family: var(--headingfont);
+  width: 101px;
+  height: 53px;
+  background-color: #837070;
+  text-align: center;
+  transform: translate(-50px, -50px);
+}
+.navb .menu ul {
+  display: flex;
+  gap: 30px;
+}
+.navb .menu ul li {
+  list-style: none;
+  text-transform: uppercase;
+}
+.logo {
+  text-decoration: none;
+  font-family: var(--headingfont);
+  color: white;
+}
+
+
+.navb .menu ul a {
+  color: white  ;
+  font-weight: bolder;
+  font-family: var(--subheading);
+}
+.section {
+  columns: 5;
+  width: 100%;
+  padding-right: 23px;
+  padding-left: 8px;
+}
+.box {
+  break-inside: avoid;
+  width: 100%;
+}
+.box img {
+  max-width: 100%;
+  border-radius: 12px;
+  min-width: 100%;
+}
+.wtl{
+  font-family: var(--headingfont);
+}
+.viewall a {
+  color:  #a6e4e7;
+}
+.welc{
+  font-family: var(--headingfont);
+}
+.box p {
+  text-transform: capitalize;
+  font-family: var(--parafont);
+  font-weight: 600;
+  font-size: larger;
+}
+.viewall a:hover {
+  text-decoration: line-through;
+}
+
+
+.down{
+  color: #262626;
+}
+
+
+
+
+.logou {
+  position: relative;
+  border-radius: 6px;
+  border: none;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #ebcbae ;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+
+.logou:active {
+  transform: scale(0.96);
+}
+
+.logou:before,
+.logou:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: -1000;
+  background-repeat: no-repeat;
+}
+
+.logou:hover:before {
+  top: -70%;
+  background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #7d2ae8 20%, transparent 30%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%;
+  background-position: 50% 120%;
+  animation: greentopBubbles 0.6s ease;
+}
+
+@keyframes greentopBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+      40% 90%, 55% 90%, 70% 90%;
+  }
+
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+      50% 50%, 65% 20%, 90% 30%;
+  }
+
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+      50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+.logou:hover::after {
+  bottom: -70%;
+  background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  background-position: 50% 0%;
+  animation: greenbottomBubbles 0.6s ease;
+}
+
+@keyframes greenbottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+      70% -10%, 70% 0%;
+  }
+
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+      105% 0%;
+  }
+
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+      110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+
+
+
+@media (max-width: 768px) {
+  .section {
+    columns: 4;
+  }
+  .navb ul {
+    flex-direction: column;
+  }
+  .navb {
+    top: -192px;
+  }
+  .navb.active {
+    top: -4%;
+  }
+  .navb .menu {
+    align-items: center;
+  }
+  .m-bt {
+    top: 125%;
+  }
+}
+@media (max-width: 600px) {
+  .section {
+    columns: 2;
+  }
+}
+@media (max-width: 323px){
+  .navb{
+    top: -218px;
+  }
+}
+
+
+
+
+
+
+
+
